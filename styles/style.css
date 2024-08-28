@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+   --color-primario: #7C93C3;
+   --color-secundario: #55679C;
+   --color-terciario: #1E2A5E;
+   --color-cuaternario: #E1D7B7;
+
+   --fuente-krona: 'Krona One', sans-serif;
+   --fuente-montserrat: 'Montserrat', sans-serif;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: var(--fuente-krona);
+    background: var(--color-primario);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.encriptar {
+    flex: 1;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    background: none;
+}
+
+.encriptar__titulo {
+    color: var(--color-cuaternario);
+    font-size: 3rem;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+textarea {
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    resize: none;
+    background: var(--color-cuaternario);
+    font-family: var(--fuente-krona);
+    font-size: 2.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    border-radius: 24px;
+
+}
+.encriptar__advertencia{
+    margin-top: 5%;
+    display: flex;
+    justify-content: left;
+    color: var(--color-cuaternario);
+    gap: 5px;
+}
+
+.advertencia{
+    display: flex;
+    justify-content: left;
+
+}
+.botones {
+    margin-top: 1%;
+    display: flex;
+    justify-content: left;
+
+}
+button {
+    font-family: var(--fuente-montserrat);
+    padding: 1.5% 7%;
+    margin: 30px;
+    border-color: var(--color-terciario);
+    border-radius: 16px;
+    font-size: 1.5rem;
+    width: 600;
+}
+button:hover{
+    font-family: var(--fuente-montserrat);
+    padding: 1% 5%;
+    margin: 30px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 2rem;
+    background: none;
+    border-color: var(--color-terciario);
+}
+.encriptar__boton {
+    background-color: var(--color-secundario);
+    color: var(--color-cuaternario);
+    border: 2px solid var(--color-terciario);
+
+}
+.desencriptar__boton {
+    background-color: var(--color-secundario);
+    color: var(--color-cuaternario);
+    border: 2px solid var(--color-terciario);
+}
+
+.desencriptar {
+    width: 500px;
+    background-color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    padding: 40px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.imagen{
+    width: 70%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+#mensaje-encriptado p{
+    font-size: 2em;
+    color: var(--color-cuaternario);
+}
+
+.footer{
+    color:var(--color-primario);
+    background-color: var(--color-cuaternario);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .encriptar, .desencriptar {
+        width: auto;
+        font-size: small;
+    }
+    textarea{
+        width: auto;
+    }
+    .advertencia{
+        font-size: small;
+    }
+    .imagen{
+        display: none;
+    }
+    .botones{
+        margin: 0%;
+        flex-direction: row;
+    }
+    .copy-button-text{
+        font-size: medium;
+    }
+    .footer{
+        font-size: small;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        padding: 5% 0% 5% 0%;
+        width: auto;
+
+    }
+    .advertencia{
+        font-size: small;
+    }    
+    .encriptar{
+        padding: 0%;
+        font-size: small;
+    }
+    .desencriptar{
+        padding: 0%;
+        font-size: small;
+    }
+    .imagen{
+        display: none;
+    }
+    textarea{
+        padding: 0% 0% 25% 0%;
+    }
+    .botones{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .copy-button-text{
+        font-size: medium;
+    }
+    .footer{
+        font-size: small;
+    }
+}

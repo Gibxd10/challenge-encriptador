@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Textos</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="encriptar">
+            <div class="encriptar__titulo">Encriptador de Texto</div>
+            <textarea placeholder="Ingresa tu texto para encriptar." id="input-text"></textarea>
+            <div class="encriptar__advertencia">
+                <img src="assets/Vector.png" alt="Simbolo de exclamación">
+                <span class="advertencia">Solo letras minusculas y sin acentos</span>
+            </div>
+            <div class="botones">
+                <button class="encriptar__boton">Encriptar</button>
+                <button class="desencriptar__boton">Desencriptar</button>
+            </div>
+        </div>
+        <div class="desencriptar">
+            <img class="imagen" src="assets/encriptar.png" alt="Imagen de una persona encriptando">
+            <div id="mensaje-encriptado">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <button class="copy-button-text" id="copy-button" style="display: none;">Copiar Texto</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Desarrollado por Gibran Gutierrez</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
